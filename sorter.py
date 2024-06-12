@@ -14,8 +14,6 @@ class Sorter:
                     min_idx = i
 
             self.swap_elements(list, current_idx, min_idx)
-            print(list)
-            sleep(1)
 
         return list
 
@@ -24,9 +22,7 @@ class Sorter:
             j = i
 
             while j and list[j - 1] > list[j]:
-                print(list)
                 self.swap_elements(list, j, j - 1)
                 j = j - 1
-                sleep(1)
 
         return list
