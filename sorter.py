@@ -1,8 +1,8 @@
 class Sorter:
-    def swap_elements(self, list: list, first: int, second: int) -> None:
+    def swap_elements(self, list: list[int], first: int, second: int) -> None:
         (list[first], list[second]) = (list[second], list[first])
 
-    def selection_sort(self, list: list) -> list:
+    def selection_sort(self, list: list[int]) -> list[int]:
         for current_idx in range(len(list)):
             min_idx = current_idx
 
