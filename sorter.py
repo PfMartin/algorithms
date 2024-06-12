@@ -1,6 +1,3 @@
-from time import sleep
-
-
 class Sorter:
     def swap_elements(self, list: list[int], first: int, second: int) -> None:
         (list[first], list[second]) = (list[second], list[first])
