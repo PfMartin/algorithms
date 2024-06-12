@@ -1,4 +1,4 @@
-name: Static check
+name: Static checks and unit tests
 
 on:
   pull_request:
@@ -9,8 +9,8 @@ on:
     tags: '*'
 
 jobs:
-  formatting-check:
-    name: formatting-check
+  tests:
+    name: static checks and unit tests
     runs-on: ubuntu-latest
 
     steps:
@@ -34,4 +34,7 @@ jobs:
       
       - name: Check formatting
         run: poetry run black --check .
+
+      - name: Run unit tests
+        run: poetry run pytest .
       
