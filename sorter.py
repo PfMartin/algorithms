@@ -1,3 +1,6 @@
+from time import sleep
+
+
 class Sorter:
     def swap_elements(self, list: list[int], first: int, second: int) -> None:
         (list[first], list[second]) = (list[second], list[first])
@@ -11,5 +14,19 @@ class Sorter:
                     min_idx = i
 
             self.swap_elements(list, current_idx, min_idx)
+            print(list)
+            sleep(1)
+
+        return list
+
+    def insertion_sort(self, list: list[int]) -> list[int]:
+        for i in range(1, len(list)):
+            j = i
+
+            while j and list[j - 1] > list[j]:
+                print(list)
+                self.swap_elements(list, j, j - 1)
+                j = j - 1
+                sleep(1)
 
         return list
